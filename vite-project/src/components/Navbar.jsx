@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link to="/">Deliveries</Link>
               <ul className="p-2 bg-green-800">
                 <li><Link to="/">Scheduled</Link></li>
-                <li><Link to="/">Current</Link></li>
+                <li><Link to="/current-deliveries">Current</Link></li>
                 <li><Link to="/">Previous</Link></li>
               </ul>
             </li>
@@ -48,7 +48,7 @@ const Navbar = () => {
               <summary>Deliveries</summary>
               <ul className="p-2 bg-green-800">
               <li><Link to="/">Scheduled</Link></li>
-                <li><Link to="/">Current</Link></li>
+                <li><Link to="/current-deliveries">Current</Link></li>
                 <li><Link to="/">Previous</Link></li>
               </ul>
             </details>

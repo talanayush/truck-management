@@ -5,7 +5,9 @@ import ReceiveDelivery from './components/ReceiveDelivery';
 import QRScanner from './components/Qr_Scanner';
 import HomePage from './components/HomePage'
 import Footer from './components/Footer'
+import LiveTracking from './components/MapWithPath'
 import Navbar from './components/Navbar';
+import CurrentDeliveries from './components/CurrentDeliveries'
 import './styles.css'; // Import your styles
 
 const App = () => {
@@ -18,13 +20,15 @@ const App = () => {
         {/* Main content */}
         <main className="p-6">
           <Routes>
+            {/* <Route path="/live-tracking/:truckId" component={<LiveTracking/>} /> */}
             <Route path="/" element={<HomePage />} />
             <Route path="/send-delivery" element={<SendDelivery />} />
+            <Route path="/current-deliveries" element={<CurrentDeliveries />} />
             <Route path="/receive-delivery" element={<ReceiveDelivery />} />
             <Route path="/qr-scanner" element={<QRScanner />} />
           </Routes>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
