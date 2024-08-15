@@ -5,8 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: { backgroundImage: { 'my-image' : "url('./assets/logix.jpg')", }, },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 

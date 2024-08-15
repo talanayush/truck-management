@@ -1,0 +1,43 @@
+/* Styling for the background image container */
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .bg-dark-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Darken the background */
+  }
+  
+  /* Banner styling */
+  .banner {
+    background-color: #1d4ed8; /* Dark blue background */
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .banner p {
+    font-size: 1.25rem;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #2d3748; /* Dark gray background */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #4a5568; /* Lighter border for separation */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
