@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import Navbar from '../components/Navbar'
 import bg from '../assets/logis.png'; // Import the background image
-
+import Stats from '../components/Stats'
 const HomePage = () => {
   return (
     <>
@@ -29,10 +29,8 @@ const HomePage = () => {
         </div>
       </div>
       <div className="text-white">
-        {/* <PetTypes />
-        <Section3 />
-        <Register />
-        <Footer /> */}
+        <Stats/>
+        {/* <Footer/> */}
       </div>
       </>
   );

@@ -4,6 +4,7 @@ import SendDelivery from './components/SendDelivery';
 import ReceiveDelivery from './components/ReceiveDelivery';
 import QRScanner from './components/Qr_Scanner';
 import HomePage from './components/HomePage'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar';
 import './styles.css'; // Import your styles
 
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/qr-scanner" element={<QRScanner />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </Router>
   );

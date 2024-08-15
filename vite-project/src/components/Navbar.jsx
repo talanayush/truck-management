@@ -38,9 +38,9 @@ const Navbar = () => {
             <li><Link to="/">Receive Truck</Link></li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl text-white">Truck Management</Link>
+        <Link to="/" className="btn btn-ghost normal-case font-bold text-xl text-white">Truck Management</Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center font-bold hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link to="/send-delivery">Send Truck</Link></li>
           <li>

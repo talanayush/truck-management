@@ -33,7 +33,7 @@ const ReceiveDelivery = () => {
         <label className="block mb-2">Enter PIN:</label>
         <input
           type="text"
-          className="border p-2"
+          className="border  border-gray-300 bg-white  p-2"
           value={pin}
           onChange={(e) => setPin(e.target.value)}
         />

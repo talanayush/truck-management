@@ -134,19 +134,19 @@ const SendDelivery = () => {
           </div>
 
           <div className=" mb-4">
-            <label className="block mb-2">Select Source:</label>
+            <label className="block mb-2 ">Select Source:</label>
             <input
               type="text"
               value={source}
               onChange={(e) => setSource(e.target.value)}
-              className="border p-2 mb-2"
+              className="border  border-gray-300 bg-white p-2 mb-2"
             />
             <label className="block mb-2">Select Destination:</label>
             <input
               type="text"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
-              className="border p-2 mb-2"
+              className="border  border-gray-300 bg-white  p-2 mb-2"
             />
           </div>
 
