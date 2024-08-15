@@ -1,0 +1,244 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fc;
+    color: #444;
+}
+
+header {
+    background-color: #004085;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 100px); 
+}
+
+.side-tab {
+    background-color: #004085;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    transition: width 0.3s;
+    position: relative;
+}
+
+.toggle-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #0056b3; 
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.section h2 {
+    border-bottom: 3px solid #004085;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #004085;
+}
+
+.scanner input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.scanner input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.truck-details, .items-list {
+    margin: 20px 0;
+}
+
+.truck-details h3, .items-list h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#send .items-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#send .items-list ul li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 4px solid #ccc;
+    transition: border-color 0.3s;
+}
+.items-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.items-list ul li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.items-list ul li:hover {
+    border-left-color: #007bff;
+}
+
+.items-list ul li .status {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.confirm-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.side-tab.collapsed {
+    width: 50px; 
+}
+
+.side-tab.collapsed .tab-button {
+    display: none; 
+}
+
+.side-tab.collapsed .toggle-btn {
+    width: 100%; 
+}
