@@ -1,0 +1,73 @@
+[
+    {
+      "item_id": "item001",
+      "name": "Laptop",
+      "description": "15-inch laptop with 16GB RAM",
+      "price": 1200,
+      "capacity": 3
+    },
+    {
+      "item_id": "item002",
+      "name": "Smartphone",
+      "description": "6.5-inch smartphone with 128GB storage",
+      "price": 800,
+      "capacity": 1
+    },
+    {
+      "item_id": "item003",
+      "name": "Tablet",
+      "description": "10-inch tablet with 64GB storage",
+      "price": 450,
+      "capacity": 2
+    },
+    {
+      "item_id": "item004",
+      "name": "Monitor",
+      "description": "27-inch 4K monitor",
+      "price": 350,
+      "capacity": 5
+    },
+    {
+      "item_id": "item005",
+      "name": "Printer",
+      "description": "Wireless all-in-one printer",
+      "price": 200,
+      "capacity": 4
+    },
+    {
+      "item_id": "item006",
+      "name": "Keyboard",
+      "description": "Mechanical keyboard with RGB lighting",
+      "price": 100,
+      "capacity": 1
+    },
+    {
+      "item_id": "item007",
+      "name": "Mouse",
+      "description": "Wireless ergonomic mouse",
+      "price": 50,
+      "capacity": 1
+    },
+    {
+      "item_id": "item008",
+      "name": "External Hard Drive",
+      "description": "1TB external hard drive",
+      "price": 80,
+      "capacity": 2
+    },
+    {
+      "item_id": "item009",
+      "name": "Router",
+      "description": "Dual-band Wi-Fi 6 router",
+      "price": 150,
+      "capacity": 3
+    },
+    {
+      "item_id": "item010",
+      "name": "Smartwatch",
+      "description": "Fitness tracking smartwatch",
+      "price": 250,
+      "capacity": 1
+    }
+  ]
+  

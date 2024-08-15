@@ -27,15 +27,21 @@ router.get('/:delivery_id', async (req, res) => {
 // Create a new delivery
 router.post('/', async (req, res) => {
   const delivery = new Delivery(req.body);
+  
   try {
     const truck = await Truck.findById(delivery.truck_id);
+    //console.log(truck);
     if (!truck) return res.status(404).json({ message: 'Truck not found' });
     if (truck.status !== 'available') return res.status(400).json({ message: 'Truck not available' });
+    console.log(truck);
+    console.log(delivery);
 
     const newDelivery = await delivery.save();
+    console.log("hi");
     truck.status = 'in transit';
     await truck.save();
     res.status(201).json(newDelivery);
+    
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

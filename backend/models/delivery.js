@@ -10,6 +10,8 @@ const deliverySchema = new mongoose.Schema({
     name: { type: String, required: true },
     quantity: { type: Number, required: true }
   }],
+  source: { type: String },  // Add this line
+  destination: { type: String },  // Add this line
   delivery_date: { type: Date, default: Date.now }
 });
 
