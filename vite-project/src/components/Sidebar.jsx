@@ -12,14 +12,14 @@ const Sidebar = () => {
             {/* Mobile Toggle Button */}
             <button
                 onClick={toggleSidebar}
-                className="lg:hidden p-2 text-white bg-green-600 hover:bg-green-700 focus:outline-none"
+                className="lg:hidden p-2 text-white bg-slate-800 hover:bg-green-700 focus:outline-none"
             >
                 {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
             </button>
 
             {/* Sidebar */}
             <div
-                className={`fixed top-0 left-0 h-full bg-green-600 text-white w-64 transform ${
+                className={`fixed top-0 left-0 h-full bg-slate-800 text-white w-64 transform ${
                     isOpen ? "translate-x-0" : "-translate-x-64"
                 } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:relative lg:w-64`}
             >
