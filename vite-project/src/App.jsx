@@ -5,7 +5,7 @@ import ReceiveDelivery from './components/ReceiveDelivery';
 import QRScanner from './components/Qr_Scanner';
 import HomePage from './components/HomePage'
 import Footer from './components/Footer'
-import LiveTracking from './components/MapWithPath'
+// import LiveTracking from './components/MapWithPath'
 import Navbar from './components/Navbar';
 import CurrentDeliveries from './components/CurrentDeliveries'
 import './styles.css'; // Import your styles
