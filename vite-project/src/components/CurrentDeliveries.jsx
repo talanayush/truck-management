@@ -3,6 +3,7 @@ import axios from "axios";
 import truckImg from "../assets/truck.jpg";
 import Modal from "../components/Modal"; // Import the Modal component
 import "../styles.css"; // Assuming you have a CSS file for custom styles
+import MapWithRoute from "./Map";
 
 const CurrentDeliveries = () => {
     const [deliveries, setDeliveries] = useState([]);
@@ -46,11 +47,8 @@ const CurrentDeliveries = () => {
 
     return (
         <div className="container p-4 grid">
-
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">
-                    In Progress
-                </h2>
+                <h2 className="text-2xl font-semibold mb-4">In Progress</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {inProgressTrucks.length > 0 ? (
@@ -61,7 +59,9 @@ const CurrentDeliveries = () => {
                                 onClick={() => handleCardClick(truck)} // Open modal with truck details
                             >
                                 <h3 className="text-lg font-bold mb-2">
-                                    Truck: {truck.truck_id?.vehicle_number || "Unknown"}
+                                    Truck:{" "}
+                                    {truck.truck_id?.vehicle_number ||
+                                        "Unknown"}
                                 </h3>
                                 <p className="text-sm mb-2">
                                     Status: {truck.status}
@@ -80,9 +80,7 @@ const CurrentDeliveries = () => {
             </section>
 
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">
-                    Completed
-                </h2>
+                <h2 className="text-2xl font-semibold mb-4">Completed</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {completedTrucks.length > 0 ? (
                         completedTrucks.map((truck) => (
@@ -92,7 +90,9 @@ const CurrentDeliveries = () => {
                                 onClick={() => handleCardClick(truck)} // Open modal with truck details
                             >
                                 <h3 className="text-lg font-bold mb-2">
-                                    Truck: {truck.truck_id?.vehicle_number || "Unknown"}
+                                    Truck:{" "}
+                                    {truck.truck_id?.vehicle_number ||
+                                        "Unknown"}
                                 </h3>
                                 <p className="text-sm mb-2">
                                     Status: {truck.status}
@@ -112,9 +112,7 @@ const CurrentDeliveries = () => {
 
             {/* Cancelled Section */}
             <section>
-                <h2 className="text-2xl font-semibold mb-4">
-                    Cancelled
-                </h2>
+                <h2 className="text-2xl font-semibold mb-4">Cancelled</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {cancelledTrucks.length > 0 ? (
                         cancelledTrucks.map((truck) => (
@@ -124,7 +122,9 @@ const CurrentDeliveries = () => {
                                 onClick={() => handleCardClick(truck)} // Open modal with truck details
                             >
                                 <h3 className="text-lg font-bold mb-2">
-                                    Truck: {truck.truck_id?.vehicle_number || "Unknown"}
+                                    Truck:{" "}
+                                    {truck.truck_id?.vehicle_number ||
+                                        "Unknown"}
                                 </h3>
                                 <p className="text-sm mb-2">
                                     Status: {truck.status}

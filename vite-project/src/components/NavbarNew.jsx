@@ -20,9 +20,9 @@ const Navbar = () => {
 
     const handleLogout = async () => {
         try {
-            await account.deleteSession("current"); // Logout user
-            setUser(null); // Clear user state
-            navigate("/login"); // Redirect to login page
+            await account.deleteSession("current");
+            setUser(null);
+            navigate("/login");
         } catch (error) {
             console.error("Failed to logout", error);
         }
