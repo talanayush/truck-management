@@ -66,7 +66,15 @@ const Qr_Scanner = ({ items, setItems }) => {
 
                         // Extract truck number and item from the scanned result
                         const [truckNumber, itemString] = result.split(":"); // Assuming format is "TRUCK001:item1"
-                        const item = { item_id: itemString, name: itemString, quantity: 1 }; // Assuming item object structure
+
+
+                        const item = {
+                            item_id: itemString,
+                            name: result,
+                            quantity: 1,
+                        }; // Assuming item object structure
+
+                        console.log('Result: ', result);
 
                         // Update the state to group items under each truck
                         setScanResult((prevResults) => ({
@@ -123,14 +131,13 @@ const Qr_Scanner = ({ items, setItems }) => {
                 </div>
             )}
             <div className="mt-6 space-y-4">
+                <h2 className="text-xl font-bold text-gray-700 mb-2">Items:</h2>
+                
                 {Object.keys(scanResult).map((truckNumber) => (
                     <div
                         key={truckNumber}
                         className="bg-white p-4 rounded-lg shadow-md"
                     >
-                        <h2 className="text-xl font-bold text-gray-700 mb-2">
-                            {truckNumber} Items:
-                        </h2>
                         <ul className="list-disc list-inside space-y-1">
                             {scanResult[truckNumber].map((item, index) => (
                                 <li key={index} className="text-gray-600">
@@ -142,7 +149,10 @@ const Qr_Scanner = ({ items, setItems }) => {
                 ))}
             </div>
 
-            <button onClick={addItems} className="bg-blue-500 text-white p-2 rounded mt-4">
+            <button
+                onClick={addItems}
+                className="bg-blue-500 text-white p-2 rounded mt-4"
+            >
                 Add these Items
             </button>
         </div>
