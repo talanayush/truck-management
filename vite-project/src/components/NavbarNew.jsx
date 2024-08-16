@@ -22,15 +22,21 @@ const Navbar = () => {
         try {
             await account.deleteSession("current"); // Logout user
             setUser(null); // Clear user state
-            navigate("/login"); // Redirect to home page
+            navigate("/login"); // Redirect to login page
         } catch (error) {
             console.error("Failed to logout", error);
         }
     };
 
     return (
-        <div className="navbar bg-green-600 text-white shadow-lg">
-            <div className="navbar-start">
+        <div className="navbar bg-slate-900 text-white shadow-lg">
+            <div className="navbar-start flex items-center space-x-4">
+                {/* Signature */}
+                <div className="ml-5 text-xl font-bold">
+                    Truck Inventory Management
+                </div>
+                
+                {/* Dropdown menu for mobile view */}
                 <div className="dropdown">
                     <div
                         tabIndex="0"
@@ -57,55 +63,34 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-green-700 rounded-box mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <Link to="/send-delivery">Send Truck</Link>
+                            <Link to="/reports">Reports</Link>
                         </li>
                         <li>
-                            <Link to="/current-deliveries">Deliveries</Link>
-                            <ul className="p-2 bg-green-800">
-                                <li>
-                                    <Link to="/">Scheduled</Link>
-                                </li>
-                                <li>
-                                    <Link to="/current-deliveries">
-                                        Current
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Previous</Link>
-                                </li>
-                            </ul>
+                            <Link to="/settings">Settings</Link>
                         </li>
                         <li>
-                            <Link to="/receive-delivery">Receive Truck</Link>
+                            <Link to="/user-info">User Info</Link>
                         </li>
+                        {user && (
+                            <li>
+                                <button
+                                    className="w-full text-left p-2 bg-red-600 hover:bg-red-700 rounded"
+                                    onClick={handleLogout}
+                                >
+                                    Logout
+                                </button>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>
             <div className="navbar-center font-bold hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <Link to="/send-delivery">Send Truck</Link>
+                        <Link to="/reports">Reports</Link>
                     </li>
                     <li>
-                        <details>
-                            <summary>Deliveries</summary>
-                            <ul className="p-2 bg-green-800">
-                                <li>
-                                    <Link to="/">Scheduled</Link>
-                                </li>
-                                <li>
-                                    <Link to="/current-deliveries">
-                                        Current
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Previous</Link>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <Link to="/receive-delivery">Receive Truck</Link>
+                        <Link to="/settings">Settings</Link>
                     </li>
                 </ul>
             </div>
