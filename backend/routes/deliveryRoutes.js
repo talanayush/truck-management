@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Get delivery by delivery_id
+    // Get delivery by delivery_id
 router.get("/:delivery_id", async (req, res) => {
     try {
         const delivery = await Delivery.findOne({
@@ -37,7 +37,7 @@ router.post("/", async (req, res) => {
         if (!truck) return res.status(404).json({ message: "Truck not found" });
         if (truck.status !== "available")
             return res.status(400).json({ message: "Truck not available" });
-        
+
         console.log(truck);
         console.log(delivery);
 
