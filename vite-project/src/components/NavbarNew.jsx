@@ -32,9 +32,7 @@ const Navbar = () => {
         <div className="navbar bg-slate-900 text-white shadow-lg">
             <div className="navbar-start flex items-center space-x-4">
                 {/* Signature */}
-                <div className="ml-5 text-xl font-bold">
-                    Truck Inventory Management
-                </div>
+                <div className="ml-5 text-xl font-bold">WareFleet</div>
 
                 {/* Dropdown menu for mobile view */}
                 <div className="dropdown">

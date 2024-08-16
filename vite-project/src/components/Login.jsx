@@ -51,11 +51,13 @@ const Login = () => {
                 )}
                 {/* User-specific overlay */}
                 {user && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-6 rounded-lg shadow-lg z-20">
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-6 rounded-lg shadow-lg z-20">
                         <div className="text-center">
                             <p className="text-2xl font-bold mb-2">Welcome</p>
                             <p className="text-lg mb-2">{user.name || "???"}</p>
-                            <p className="text-sm mb-4">{user.email || "???"}</p>
+                            <p className="text-sm mb-4">
+                                {user.email || "???"}
+                            </p>
                             <div className="flex flex-col space-y-4">
                                 <button
                                     className="py-2 px-6 bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold rounded-lg shadow-md hover:from-red-700 hover:to-red-900 transition duration-300 ease-in-out"
@@ -81,48 +83,67 @@ const Login = () => {
                 {/* About Us Section */}
                 <div className="mt-0">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-extrabold mb-4">About Us</h2>
+                        <h2 className="text-3xl font-extrabold mb-4">
+                            About Us
+                        </h2>
                         <p className="text-base mb-8 leading-relaxed">
-                            Welcome to our application. We strive to offer the best service for managing your logistics and tracking deliveries. Our team is dedicated to providing a seamless experience and excellent customer support. If you have any questions or feedback, feel free to reach out to us.
+                            Welcome to our application. We strive to offer the
+                            best service for managing your logistics and
+                            tracking deliveries. Our team is dedicated to
+                            providing a seamless experience and excellent
+                            customer support. If you have any questions or
+                            feedback, feel free to reach out to us.
                         </p>
                     </div>
 
                     <div className="max-w-4xl mx-auto space-y-6">
                         {/* Feature 1 */}
                         <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
-                            <h3 className="text-xl font-semibold mb-2">Real-Time Truck Tracking</h3>
+                            <h3 className="text-xl font-semibold mb-2">
+                                Real-Time Truck Tracking
+                            </h3>
                             <p className="text-sm leading-relaxed">
-                                Monitor truck deliveries between warehouses with up-to-date status information.
+                                Monitor truck deliveries between warehouses with
+                                up-to-date status information.
                             </p>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-green-500">
-                            <h3 className="text-xl font-semibold mb-2">QR Code Scanning</h3>
+                            <h3 className="text-xl font-semibold mb-2">
+                                QR Code Scanning
+                            </h3>
                             <p className="text-sm leading-relaxed">
-                                Ensure accurate delivery by scanning unique QR codes assigned to each truck and item.
+                                Ensure accurate delivery by scanning unique QR
+                                codes assigned to each truck and item.
                             </p>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-yellow-500">
-                            <h3 className="text-xl font-semibold mb-2">Detailed Warehouse Dashboards</h3>
+                            <h3 className="text-xl font-semibold mb-2">
+                                Detailed Warehouse Dashboards
+                            </h3>
                             <p className="text-sm leading-relaxed">
-                                Access comprehensive views of trucks sent and received for efficient inventory management.
+                                Access comprehensive views of trucks sent and
+                                received for efficient inventory management.
                             </p>
                         </div>
 
                         {/* Feature 4 */}
                         <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-red-500">
-                            <h3 className="text-xl font-semibold mb-2">Complete Item Verification</h3>
+                            <h3 className="text-xl font-semibold mb-2">
+                                Complete Item Verification
+                            </h3>
                             <p className="text-sm leading-relaxed">
-                                Confirm that all dispatched items have been received with precise QR code checks.
+                                Confirm that all dispatched items have been
+                                received with precise QR code checks.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             {/* Footer */}
             <footer className="footer bg-base-200 text-base-content p-10 mt-0">
                 <aside>
