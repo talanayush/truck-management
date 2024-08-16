@@ -4,10 +4,7 @@ import "leaflet/dist/leaflet.css";
 import axios from "axios";
 
 const MapWithRoute = ({ start, end }) => {
-    const [positions, setPositions] = useState({
-        startPos: null,
-        endPos: null,
-    });
+    const [route, setRoute] = useState([]);
 
     useEffect(() => {
         const fetchCoordinates = async () => {
@@ -28,25 +25,36 @@ const MapWithRoute = ({ start, end }) => {
                         parseFloat(endRes.data[0].lat),
                         parseFloat(endRes.data[0].lon),
                     ];
-                    setPositions({ startPos, endPos });
+
+                    const routeRes = await axios.get(
+                        `https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf62486a07735dfaeb4ed6b5655459a1df9f02&start=${startPos[1]},${startPos[0]}&end=${endPos[1]},${endPos[0]}`
+                    );
+
+                    if (routeRes.data.features.length > 0) {
+                        const coords =
+                            routeRes.data.features[0].geometry.coordinates;
+                        const routePath = coords.map((coord) => [
+                            coord[1],
+                            coord[0],
+                        ]);
+                        setRoute(routePath);
+                    }
                 }
             } catch (error) {
-                console.error("Error fetching coordinates:", error);
+                console.error("Error fetching route data:", error);
             }
         };
 
         fetchCoordinates();
     }, [start, end]);
 
-    if (!positions.startPos || !positions.endPos) {
+    if (route.length === 0) {
         return <div>Loading map...</div>;
     }
 
-    const route = [positions.startPos, positions.endPos];
-
     return (
         <MapContainer
-            center={positions.startPos}
+            center={route[0]}
             zoom={13}
             style={{
                 height: "450px",
@@ -60,8 +68,8 @@ const MapWithRoute = ({ start, end }) => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            <Marker position={positions.startPos} />
-            <Marker position={positions.endPos} />
+            <Marker position={route[0]} />
+            <Marker position={route[route.length - 1]} />
             <Polyline positions={route} color="blue" weight={4} />
         </MapContainer>
     );

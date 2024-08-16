@@ -52,10 +52,13 @@ const Modal = ({ truck, onClose }) => {
                                 <p>No items in this truck</p>
                             )}
                         </div>
-                        
                     </div>
+                    
                     <div className="w-1/2">
-                        <MapWithRoute start={`${truck.source}`} end={`${truck.destination}`} />
+                        <MapWithRoute
+                            start={`${truck.source}`}
+                            end={`${truck.destination}`}
+                        />
                     </div>
                 </div>
             </div>
