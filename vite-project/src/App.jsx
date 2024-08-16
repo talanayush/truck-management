@@ -17,7 +17,7 @@ import CurrentDeliveries from "./components/CurrentDeliveries";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar"; // Import the Sidebar component
 import "./styles.css"; // Import your styles
-import MapWithRoute from "./components/Map";
+import FAQPage from "./components/FAQs";
 
 // Mock authentication service
 const account = {
@@ -50,6 +50,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/login" element={<LoginPage />} />
+
                 <Route
                     path="/"
                     element={user ? <MainLayout /> : <Navigate to="/login" />}
@@ -66,6 +67,8 @@ const App = () => {
                     />
                     <Route path="/qr-scanner" element={<QRScanner />} />
                 </Route>
+
+                <Route path="/faq" element={<FaqLayout />}></Route>
             </Routes>
         </Router>
     );
@@ -88,6 +91,16 @@ const MainLayout = () => {
         </>
     );
 };
+
+const FaqLayout = () => {
+    return (
+        <>
+            <Navbar />
+            <FAQPage />
+            <Footer />
+        </>
+    )
+}
 
 // Login page layout
 const LoginPage = () => {

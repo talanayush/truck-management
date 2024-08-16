@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className="ml-5 text-xl font-bold">
                     Truck Inventory Management
                 </div>
-                
+
                 {/* Dropdown menu for mobile view */}
                 <div className="dropdown">
                     <div
@@ -60,37 +60,24 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="0"
-                        className="menu menu-sm dropdown-content bg-green-700 rounded-box mt-3 w-52 p-2 shadow"
+                        className="menu menu-sm dropdown-content bg-green-700 mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <Link to="/reports">Reports</Link>
+                            <Link to="/">Dashboard</Link>
                         </li>
                         <li>
-                            <Link to="/settings">Settings</Link>
+                            <Link to="/faq">FAQs</Link>
                         </li>
-                        <li>
-                            <Link to="/user-info">User Info</Link>
-                        </li>
-                        {user && (
-                            <li>
-                                <button
-                                    className="w-full text-left p-2 bg-red-600 hover:bg-red-700 rounded"
-                                    onClick={handleLogout}
-                                >
-                                    Logout
-                                </button>
-                            </li>
-                        )}
                     </ul>
                 </div>
             </div>
             <div className="navbar-center font-bold hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <Link to="/reports">Reports</Link>
+                        <Link to="/">Dashboard</Link>
                     </li>
                     <li>
-                        <Link to="/settings">Settings</Link>
+                        <Link to="/faq">FAQs</Link>
                     </li>
                 </ul>
             </div>
